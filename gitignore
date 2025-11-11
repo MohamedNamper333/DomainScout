@@ -1,0 +1,14 @@
+# Nmap and runtime outputs
+/nmap_results/
+/nmap_sub.txt
+/ips.txt
+/alive.txt
+/subdomains.txt
+
+# Temp files / editors
+*.log
+*.tmp
+index.html
+.vscode/
+.DS_Store
+
