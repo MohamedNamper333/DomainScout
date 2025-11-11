@@ -1,0 +1,31 @@
+# HOW_TO_USE — DomainScout
+
+This document explains, step-by-step, how to prepare your environment, run DomainScout, and interpret results. It also contains quick troubleshooting tips.
+
+---
+
+## 1. Quick summary
+DomainScout is a Bash script that:
+1. Fetches a target web page.
+2. Extracts hostnames/subdomains found on the page.
+3. Checks which hosts respond to `ping`.
+4. Resolves IPv4 addresses for alive hosts.
+5. Runs advanced Nmap scans (ports, service/version detection, OS detection, selected NSE scripts).
+6. Saves outputs to files for later review.
+
+---
+
+## 2. Requirements
+- A Unix-like environment (Linux or WSL on Windows).
+- Installed tools:
+  - `bash`
+  - `curl`
+  - `grep`, `awk`, `sed`, `sort`, `uniq`
+  - `dig` (or `host`)
+  - `nmap`
+- Recommended: run DomainScout with `sudo` for best Nmap results (SYN scan, OS detection).
+
+Install example (Debian/Ubuntu):
+```bash
+sudo apt update
+sudo apt install -y curl dnsutils nmap git
